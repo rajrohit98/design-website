@@ -1,37 +1,60 @@
 // import * as React from "react";
-import Box from "@mui/material/Box";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import { Stack } from "@mui/material";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
-// const bull = (
-//   <Box
-//     component="span"
-//     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-//   >
-//     •
-//   </Box>
-// );
 
 function Cards() {
   return (
-      <Card sx={{ maxWidth: "200px" }}>
+    <Card
+      sx={{
+        width: "330px",
+        height: "200px",
+        paddingLeft: "10px",
+      }}
+    >
       <CardContent>
-        <Typography variant="h5" component="div">
-          Title
-        </Typography>
-        <Typography sx={{ mb: 1.0 }} color="text.secondary">
+        <Typography variant="h5">Title</Typography>
+        <Typography sx={{ mt: "10px" }} color="text.secondary">
           A suitable description
         </Typography>
-        <Typography variant="body2">
+        <Typography
+          variant="h5"
+          fontWeight={"bold"}
+          sx={{
+            mt: "20px",
+          }}
+        >
           $ 1000.0 M
-          <br />
-          {"100.0%"}
         </Typography>
+
+        <Stack
+          direction={"row"}
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+          }}
+        >
+          <ArrowDropUpIcon
+            fontSize="large"
+            color="green"
+            style={{
+              color: "green",
+            }}
+          />
+          <Typography
+            variant="h6"
+            fontWeight={"bold"}
+            sx={{
+              mt: "20px",
+            }}
+          >
+            100.0 %
+          </Typography>
+        </Stack>
       </CardContent>
-      </Card>
+    </Card>
   );
 }
 
